@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "user";
+option java_package = "com.houzhenguo.protobuf";
+
+message RequestMsg
+{
+    string name = 1;
+}
+message ResponseMsg
+{
+    string res = 1;
+}
+
+service HelloService
+{
+    rpc hello(RequestMsg) returns (ResponseMsg);
+}
